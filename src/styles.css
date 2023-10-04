@@ -1,0 +1,332 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  font-family: monospace;
+}
+
+.App {
+  font-family: sans-serif;
+  text-align: center;
+  background-color: teal;
+  width: 100%;
+  height: 100vh;
+  z-index: 1;
+}
+
+.overlayeffect {
+  width: 100vw;
+  height: 100vh;
+  z-index: 100;
+  background-color: red;
+}
+
+.taskbar {
+  position: relative;
+  z-index: 10;
+  position: fixed;
+  display: flex;
+  align-items: center;
+  bottom: 0;
+  height: 2.75rem;
+  background-color: rgb(180, 180, 180);
+  width: 100vw;
+  border-top: 3px solid lightgrey;
+}
+
+.startbtn {
+  margin-left: 2px;
+  height: 75%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  background-color: rgb(180, 180, 180);
+  border-right: 3px solid rgb(59, 59, 59);
+  border-bottom: 3px solid rgb(59, 59, 59);
+  border-top: 3px solid lightgrey;
+  border-left: 3px solid lightgrey;
+}
+
+.startbtn:hover {
+  background-color: rgb(165, 165, 165);
+}
+
+.startbtn span {
+  font-weight: bold;
+  transform: scale(1, 1.25);
+  font-size: 1rem;
+}
+
+.startmenu {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 17.5rem;
+  height: 25rem;
+  background-color: rgb(180, 180, 180);
+  border-right: 3px solid rgb(59, 59, 59);
+  border-bottom: 3px solid rgb(59, 59, 59);
+  border-top: 3px solid lightgrey;
+  border-left: 3px solid lightgrey;
+  position: absolute;
+  bottom: 2.75rem;
+  z-index: 10;
+}
+
+.startmenu ul {
+  list-style: none;
+  width: 100%;
+}
+
+.startmenu ul li {
+  user-select: none;
+  width: 100%;
+  font-weight: 400;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  font-size: 1.5rem;
+  transform: scale(1, 1.2);
+  letter-spacing: -1px;
+}
+
+.startmenu ul li:hover {
+  color: white;
+  background-color: rgb(0, 0, 154);
+}
+
+.settingslist ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.settingslist ul li {
+  font-size: 1rem;
+  color: black;
+  list-style-type: none;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.programslist {
+  display: flex;
+  align-items: center;
+  width: 10vw;
+  height: 20rem;
+  background-color: red;
+  position: absolute;
+  left: 17.5rem;
+  top: -0.2rem;
+  width: 15rem;
+  background-color: rgb(180, 180, 180);
+  border-right: 3px solid rgb(59, 59, 59);
+  border-bottom: 3px solid rgb(59, 59, 59);
+  border-top: 3px solid lightgrey;
+  border-left: 3px solid lightgrey;
+}
+
+.documentslist {
+  display: flex;
+  align-items: center;
+  width: 10vw;
+  height: 5rem;
+  background-color: red;
+  position: absolute;
+  left: 17.5rem;
+  top: -0.1rem;
+  width: 15rem;
+  background-color: rgb(180, 180, 180);
+  border-right: 3px solid rgb(59, 59, 59);
+  border-bottom: 3px solid rgb(59, 59, 59);
+  border-top: 3px solid lightgrey;
+  border-left: 3px solid lightgrey;
+}
+
+.settingslist {
+  display: flex;
+  align-items: center;
+  width: 10vw;
+  height: 10rem;
+  background-color: red;
+  position: absolute;
+  left: 17.5rem;
+  top: -0.1rem;
+  width: 15rem;
+  background-color: rgb(180, 180, 180);
+  border-right: 3px solid rgb(59, 59, 59);
+  border-bottom: 3px solid rgb(59, 59, 59);
+  border-top: 3px solid lightgrey;
+  border-left: 3px solid lightgrey;
+}
+
+.startmenuarrows {
+  position: absolute;
+  right: 10px;
+  font-size: 1rem;
+}
+
+.taskbarclock {
+  display: flex;
+  position: absolute;
+  height: 10%;
+  right: 0;
+  margin: 5px;
+  width: 5rem;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  background-color: rgb(180, 180, 180);
+  border-left: 3px solid rgb(59, 59, 59);
+  border-top: 3px solid rgb(59, 59, 59);
+  border-right: 3px solid lightgrey;
+  border-bottom: 3px solid lightgrey;
+}
+
+.taskbarclock p {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  font-weight: bold;
+  transform: scale(1, 1.2);
+  user-select: none;
+}
+
+.iconslist {
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  left: 0;
+  margin: 1rem;
+  height: 40rem;
+  width: 7.5rem;
+}
+
+.iconslist ul {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: column;
+  list-style-type: none;
+}
+
+.icondiv {
+  user-select: none;
+  width: 7.5rem;
+  height: 7.5rem;
+  border: none;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: transparent;
+}
+
+.icondiv img {
+  width: 90%;
+  height: 90%;
+}
+
+.icondiv p {
+  font-size: 0.75rem;
+  margin: 0;
+  color: white;
+  letter-spacing: -0.5px;
+  transform: scale(1, 1.25);
+}
+
+.aboutmodal {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 50rem;
+  height: 50rem;
+  top: 2rem;
+  background-color: rgb(180, 180, 180);
+  border-right: 3px solid rgb(59, 59, 59);
+  border-bottom: 3px solid rgb(59, 59, 59);
+  border-top: 3px solid lightgrey;
+  border-left: 3px solid lightgrey;
+  position: relative;
+  margin: 0 auto;
+  z-index: 5;
+  user-select: none;
+}
+
+.aboutmodal span {
+  position: absolute;
+  bottom: 0;
+  margin: 1rem;
+}
+
+.aboutmodalheading {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  margin-top: 0.2rem;
+  height: 2rem;
+  background-color: rgb(3, 3, 165);
+  color: white;
+  height: 2.5rem;
+  transform: scale(1, 1.1);
+}
+
+.aboutmodalheading h2 {
+  margin-left: 1rem;
+}
+
+.aboutmodal button {
+  position: absolute;
+  right: 0;
+  margin-right: 0.2rem;
+  width: 1.5rem;
+  background-color: rgb(180, 180, 180);
+  border-right: 3px solid rgb(59, 59, 59);
+  border-bottom: 3px solid rgb(59, 59, 59);
+  border-top: 3px solid lightgrey;
+  border-left: 3px solid lightgrey;
+}
+
+.aboutmodal button:hover {
+  background-color: rgb(146, 145, 145);
+}
+
+.abouttext {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  margin-top: 1rem;
+  width: 95%;
+  height: 80%;
+  background-color: rgb(255, 240, 187);
+  border-top: 3px solid rgb(97, 97, 97);
+  border-left: 3px solid rgb(98, 98, 98);
+  border-right: 3px solid lightgrey;
+  border-bottom: 3px solid lightgrey;
+}
+
+.abouttext h3 {
+  margin: 2rem;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.abouttext p {
+  margin: 3rem;
+  font-size: 1.5rem;
+  font-weight: 100;
+}
+
+.bluescreen {
+  display: flex;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgb(1, 1, 144);
+  z-index: 20;
+}
